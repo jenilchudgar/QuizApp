@@ -1,0 +1,74 @@
+/* Question: font-family: 'Kalam', cursive; */
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+:root{
+    --hue-nuteral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body{
+    --hue: var(--hue-nuteral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct{
+    --hue: var(--hue-correct);
+}
+
+body.wrong{
+    --hue: var(--hue-wrong);
+}
+
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+#question{
+    font-size: 1.6rem;
+}
+
+.next-btn{
+    font-size: 1.3rem;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
+
+.wrong{
+    background-color: rgb(153, 0, 0);
+}
+
+.correct{
+    background-color: #0a8a4e;
+}
